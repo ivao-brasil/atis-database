@@ -1,7 +1,6 @@
 {
   "name": "atis-database",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "release": "semantic-release",
