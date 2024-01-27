@@ -8,7 +8,7 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const db = {};
 
-const sequelize = new Sequelize(process.env.DATABASE ?? 'brivao_aero', process.env.DB_USERNAME ?? 'root', process.env.DB_PASSWORD ?? 'root', {
+const sequelize = new Sequelize(process.env.DATABASE ?? 'brivao_atis', process.env.DB_USERNAME ?? 'root', process.env.DB_PASSWORD ?? 'root', {
   host: process.env.DB_HOST ?? 'localhost',
   port: process.env.DB_PORT ?? 3306,
   dialect: process.env.DB_CONNECTION ?? 'mariadb',
