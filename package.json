@@ -1,7 +1,7 @@
 {
   "name": "atis-database",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "models/index.js",
   "scripts": {
     "migrate": "sequelize-cli db:migrate --debug"
   },
