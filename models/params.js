@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     param: {
-      type: Sequelize.JSON,
+      type: DataTypes.JSON,
       allowNull: false
     }
   }, {
