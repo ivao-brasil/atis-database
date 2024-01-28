@@ -28,6 +28,10 @@ module.exports = {
           type: 'VARCHAR(100)',
           allowNull: false
       },
+      magnetic_hdg: {
+        type: DataTypes.SMALLINT.UNSIGNED,
+        allowNull: false
+      },
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false,

@@ -22,6 +22,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       defaultValue: true
     },
+    magneticHdg: {
+      name: 'magnetic_hdg',
+      type: DataTypes.SMALLINT.UNSIGNED,
+      allowNull: false
+    },
     param: {
         type: 'VARCHAR(100)',
         allowNull: false
