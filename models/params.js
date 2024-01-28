@@ -17,6 +17,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       primaryKey: true
     },
+    active: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true
+    },
     param: {
         type: 'VARCHAR(100)',
         allowNull: false
