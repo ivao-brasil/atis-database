@@ -23,5 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     tableName: "params",
+    createdAt: "created_at",
+    updatedAt: "updated_at"
   });
 };
