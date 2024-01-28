@@ -25,7 +25,7 @@ module.exports = {
         defaultValue: true
       },
       param: {
-          type: 'VARCHAR(100)',
+          type: Sequelize.JSON,
           allowNull: false
       },
       magnetic_hdg: {

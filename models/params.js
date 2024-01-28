@@ -28,8 +28,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     param: {
-        type: 'VARCHAR(100)',
-        allowNull: false
+      type: Sequelize.JSON,
+      allowNull: false
     }
   }, {
     tableName: "runway_params",
