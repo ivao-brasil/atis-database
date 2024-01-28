@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('params', {
+    await queryInterface.createTable('runway_params', {
       airport_icao: {
         type: Sequelize.STRING(4),
         primaryKey: true,
@@ -18,6 +18,11 @@ module.exports = {
         type: Sequelize.ENUM('TAKEOFF', 'LANDING'),
         allowNull: false,
         primaryKey: true
+      },
+      active: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true
       },
       param: {
           type: 'VARCHAR(100)',

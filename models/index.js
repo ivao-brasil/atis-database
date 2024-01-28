@@ -15,8 +15,7 @@ const sequelize = new Sequelize(process.env.DB_DATABASE ?? 'brivao_atis', proces
   logging: !!process.env.DB_LOGGING ?? false,
   dialectOptions: {
     decimalNumbers: true
-  },
-  timezone: 'Etc/GMT-3',
+  }
 });
 
 fs

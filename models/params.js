@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define('Params', {
+  return sequelize.define('RunwayParams', {
     airport_icao: {
       type: DataTypes.STRING(4),
       primaryKey: true,
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
     }
   }, {
-    tableName: "params",
+    tableName: "runway_params",
     createdAt: "created_at",
     updatedAt: "updated_at"
   });
