@@ -22,8 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       defaultValue: true
     },
-    magneticHdg: {
-      name: 'magnetic_hdg',
+    magnetic_hdg: {
       type: DataTypes.SMALLINT.UNSIGNED,
       allowNull: false
     },
