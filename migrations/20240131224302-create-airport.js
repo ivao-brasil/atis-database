@@ -9,9 +9,9 @@ module.exports = {
         allowNull: false
       },
       current_atis: {
-        type: Sequelize.CHAR,
+        type: Sequelize.MEDIUMINT,
         allowNull: false,
-        defaultValue: 'A'
+        defaultValue: 0
       },
       remarks: {
         type: Sequelize.STRING,

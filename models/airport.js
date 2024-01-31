@@ -20,9 +20,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     current_atis: {
-      type: DataTypes.CHAR,
+      type: DataTypes.MEDIUMINT,
       allowNull: false,
-      defaultValue: 'A'
+      defaultValue: -1
     },
     remarks: {
       type: DataTypes.STRING(50),
