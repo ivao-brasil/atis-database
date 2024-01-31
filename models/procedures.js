@@ -14,15 +14,31 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Procedures.init({
-    airport_icao: DataTypes.STRING(4),
-    runway: DataTypes.STRING(4),
-    type: DataTypes.ENUM('TAKEOFF', 'LANDING'),
-    procedure: DataTypes.STRING(10),
-    updated_at: DataTypes.DATE,
-    created_at: DataTypes.DATE
+    airport_icao: {
+      type: DataTypes.STRING(4),
+      allowNull: false,
+      primaryKey: true
+    },
+    runway: {
+      type: DataTypes.STRING(3),
+      allowNull: false,
+      primaryKey: true
+    },
+    type: {
+      type: DataTypes.STRING(10),
+      allowNull: false,
+      primaryKey: true
+    },
+    procedure: {
+      type: DataTypes.STRING(10),
+      allowNull: false,
+      primaryKey: true
+    }
   }, {
     sequelize,
     modelName: 'procedures',
+    createdAt: "created_at",
+    updatedAt: "updated_at"
   });
   return Procedures;
 };
