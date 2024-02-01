@@ -3,17 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Airport extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  Airport.init({
+  let Airport = sequelize.define("Airport", {
     airport_icao: {
       type: DataTypes.STRING(4),
       primaryKey: true,
@@ -36,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Airport.associate = (models) => {
-    Airport.belongsTo(models.Atis, { foreignKey: 'current_atis', targetKey: 'general_id'})
+    Airport.hasOne(models.Atis, { foreignKey: 'current_atis', targetKey: 'general_id'})
   }
 
   return Airport;
