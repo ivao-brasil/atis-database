@@ -34,5 +34,10 @@ module.exports = (sequelize, DataTypes) => {
     createdAt: "created_at",
     updatedAt: "updated_at"
   });
+
+  Airport.associate = (models) => {
+    Airport.belongsTo(models.Atis, { foreignKey: 'current_atis', targetKey: 'general_id'})
+  }
+
   return Airport;
 };
