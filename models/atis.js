@@ -40,13 +40,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'atis',
+    tableName: 'atis',
     createdAt: "created_at",
     updatedAt: "updated_at"
   });
 
   Atis.associate = (models) => {
-    Atis.belongsTo(models.Airports, { foreignKey: 'airport_icao', targetKey: 'airport_icao'})
+    Atis.belongsTo(models.Airport, { foreignKey: 'airport_icao', targetKey: 'airport_icao'})
   }
 
   return Atis;

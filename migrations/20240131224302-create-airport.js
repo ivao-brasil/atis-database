@@ -10,6 +10,10 @@ module.exports = {
       },
       current_atis: {
         type: Sequelize.MEDIUMINT,
+        allowNull: true
+      },
+      mag_variation: {
+        type: Sequelize.TININT,
         allowNull: false,
         defaultValue: 0
       },

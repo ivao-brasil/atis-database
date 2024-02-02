@@ -11,8 +11,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     current_atis: {
       type: DataTypes.MEDIUMINT,
+      allowNull: true
+    },
+    mag_variation: {
+      type: DataTypes.SMALLINT,
       allowNull: false,
-      defaultValue: -1
+      defaultValue: 0
     },
     remarks: {
       type: DataTypes.STRING(50),
@@ -20,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'airport',
+    tableName: 'airports',
     createdAt: "created_at",
     updatedAt: "updated_at"
   });
