@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Airport.associate = (models) => {
-    Airport.hasOne(models.Atis, { foreignKey: 'current_atis', targetKey: 'general_id'})
+    Airport.hasOne(models.Atis, { as: 'Atis', foreignKey: 'current_atis', targetKey: 'general_id'})
   }
 
   return Airport;
