@@ -49,5 +49,9 @@ module.exports = (sequelize, DataTypes) => {
     Atis.belongsTo(models.Airport, { foreignKey: 'airport_icao', targetKey: 'airport_icao'})
   }
 
+  Atis.afterCreate(async (atis, _options) => {
+    sequelize.models.Airport.update({current_atis: atis.general_id}, {where: {airport_icao: atis.airport_icao}});
+  });
+
   return Atis;
 };
